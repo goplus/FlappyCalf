@@ -15,5 +15,4 @@ replace (
 	golang.org/x/mobile => golang.org/x/mobile v0.0.0-20210902104108-5d9a33257ab5
 	golang.org/x/mod => golang.org/x/mod v0.5.1
 	golang.org/x/tools => golang.org/x/tools v0.1.7
-	github.com/goplus/spx => ../spx
 )
