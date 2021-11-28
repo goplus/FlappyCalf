@@ -15,8 +15,8 @@ onMsg "tap", => {
 }
 
 onCloned => {
-   setCostume(Rand(0,4))
-   setXYpos 250,17
+   setCostume rand(0, 4)
+   setXYpos 250, 17
    show
    for {
         if xpos < -250 {
@@ -25,7 +25,6 @@ onCloned => {
         if niuDie == false {
             changeXpos gameScrollX
         }
-
         wait gameScrollTime
    }
    die
