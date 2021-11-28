@@ -1,6 +1,6 @@
 onStart => {
     hide
-    setXYpos 0,0
+    setXYpos 0, 0
 }
 
 onMsg "tap", => {
@@ -29,7 +29,6 @@ onCloned => {
         wait gameScrollTime
    }
    die
-
 }
 
 onCloned => {

@@ -2,7 +2,10 @@ module github.com/goplus/FlappyBird
 
 go 1.16
 
-require github.com/goplus/spx v1.0.0-beta4
+require (
+	github.com/goplus/gop v1.0.22
+	github.com/goplus/spx v1.0.0-beta5
+)
 
 replace (
 	github.com/hajimehoshi/oto => github.com/hajimehoshi/oto v1.0.1

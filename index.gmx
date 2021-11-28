@@ -6,8 +6,10 @@ var (
 	Pipe Pipe
 	Start Start
 	TapInfo TapInfo
-	userScore  int // 得分
+
+	userScore int  // 得分
 )
+
 var (
 	niuPlay bool = false
 	niuFlap bool = true
@@ -15,7 +17,6 @@ var (
 	niuGravity float64 = 0.0
 	gameScrollX float64 = -3.5
 	gameScrollTime float64 = 0.05
-
 )
 
 run "res", {Title: "FlappyBird (by Go+)"}
