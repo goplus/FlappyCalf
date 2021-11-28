@@ -18,5 +18,4 @@ var (
 	gameScrollX float64 = -3.5
 	gameScrollTime float64 = 0.05
 )
-
 run "res", {Title: "FlappyBird (by Go+)"}

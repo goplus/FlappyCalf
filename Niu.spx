@@ -67,7 +67,7 @@ onMsg "tap", =>{
 
 onMsg "tap", =>{
     for{
-        if touching("Pipe") || ypos < -123.9 {
+        if touching("Pipe") || touching(EdgeTop) || ypos < -123.9 {
             niuPlay = false
             niuDie = true
             niuGravity = 0
@@ -102,9 +102,10 @@ onMsg "tap", => {
 
 onMsg "game over", => {
     for {
-        if !touching("Ground") {
-            changeYpos -10
+        if touching("Ground") {
+            break
         }
+        changeYpos -10
         wait 0.04
     }
     setYpos -124
