@@ -5,14 +5,7 @@ onMsg "start", => {
 onMsg "menu", => {
 	setXYpos 100, 55
     turnTo 90
-    wait 0.25
-    for {
-        if niuDie == true {
-            nextCostume
-            wait 0.1
-        }
-         wait 0.03
-    }
+
 }
 
 onMsg "menu", => {
@@ -110,5 +103,9 @@ onMsg "game over", => {
     }
     setYpos -124
     turnTo 180
+    for {
+        nextCostume
+        wait 0.1
+    }
 }
 
