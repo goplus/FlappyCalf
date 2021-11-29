@@ -70,7 +70,7 @@ onMsg "tap", => {
 onMsg "tap", => {
 	for {
 		if touching("Pipe") || touching(EdgeTop) || ypos < -123.9 {
-		
+
 			calfPlay = false
 			calfDie = true
 			calfGravity = 0
@@ -82,12 +82,11 @@ onMsg "tap", => {
 	}
 }
 
-
 onMsg "tap", => {
 	flag := 0
 	for {
 		if calfPlay == true && calfGravity != 0.0 {
-			
+
 			if heading < 150 && flag == 0 {
 				turn calfGravity*-0.75
 			} else {
