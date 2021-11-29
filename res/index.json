@@ -23,7 +23,7 @@
         "target": "",
         "val": "getVar:userScore",
         "color": 15629590,
-        "label": "得分",
+        "label": "score",
         "mode": 1,
         "sliderMin": 0,
         "sliderMax": 100,
