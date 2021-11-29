@@ -3,9 +3,9 @@
       {
         "bitmapResolution": 1,
         "name": "Logo",
-        "path": "../../img/1.png",
-        "x": 36,
-        "y": 36
+        "path": "../../img/logo.jpg",
+        "x": 65,
+        "y": 42
       }
     ],
     "currentCostumeIndex": 0,

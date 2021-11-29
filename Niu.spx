@@ -1,11 +1,11 @@
 onMsg "start", => {
     setXYpos -80, 0
+    turnTo 90
+    show
 }
 
 onMsg "menu", => {
-	setXYpos 100, 55
-    turnTo 90
-
+    hide
 }
 
 onMsg "menu", => {
