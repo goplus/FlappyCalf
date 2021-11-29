@@ -57,7 +57,20 @@ onMsg "tap", => {
 
 onMsg "tap", => {
 	for {
+		if calfPlay == true {
+			for !(keyPressed(KeySpace) || mousePressed) {
+				wait 0.01
+			}
+			play mwing, true
+			wait 0.04
+		}
+	}
+}
+
+onMsg "tap", => {
+	for {
 		if touching("Pipe") || touching(EdgeTop) || ypos < -123.9 {
+		
 			calfPlay = false
 			calfDie = true
 			calfGravity = 0
@@ -69,10 +82,12 @@ onMsg "tap", => {
 	}
 }
 
+
 onMsg "tap", => {
 	flag := 0
 	for {
 		if calfPlay == true && calfGravity != 0.0 {
+			
 			if heading < 150 && flag == 0 {
 				turn calfGravity*-0.75
 			} else {
@@ -87,6 +102,13 @@ onMsg "tap", => {
 		}
 		wait 0.03
 	}
+}
+
+onMsg "game over", => {
+	if touching("Pipe") {
+		play mhit, true
+	}
+	play mdie, false
 }
 
 onMsg "game over", => {

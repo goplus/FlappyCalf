@@ -8,6 +8,11 @@ var (
 	Start    Start
 	TapInfo  TapInfo
 
+	mdie  Sound
+	mwing Sound
+	mhit  Sound
+	mpoint Sound
+
 	userScore int
 )
 
@@ -29,4 +34,4 @@ func reset() {
 	calfGravity = 0.0
 }
 
-run "res", {Title: "FlappyBird (by Go+)"}
+run "res", {Title: "FlappyCalf (by Go+)"}
