@@ -3,16 +3,6 @@ onStart =>{
     setXYpos 0, -95
 }
 
-onStart => {
-    for visible {
-        if touching(Mouse) {
-            setYpos -90
-        }else{
-            setYpos -95
-        }
-        wait 0.1
-    }
-}
 
 onClick => {
     broadcast "start"
@@ -26,4 +16,15 @@ onMsg "start", => {
 onMsg "menu", => {
 	gotoFront
     show
+    for visible {
+        if gameReset == true {
+            return
+        }
+        if touching(Mouse) {
+            setYpos -90
+        }else{
+            setYpos -95
+        }
+        wait 0.1
+    }
 }

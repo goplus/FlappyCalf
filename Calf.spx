@@ -10,18 +10,21 @@ onMsg "menu", => {
 
 onMsg "menu", => {
     for {
-        if niuPlay == true {
+        if gameReset == true {
             return
         }
-        if niuDie == false {
+        if calfPlay == true {
+            return
+        }
+        if calfDie == false {
             for i := 0; i < 10; i++ {
-                if niuPlay == false {
+                if calfPlay == false {
                     changeYpos -0.5
                 }
                 wait 0.05
             }
             for i := 0; i < 10; i++ {
-                if niuPlay == false {
+                if calfPlay == false {
                     changeYpos 0.5
                 }
                 wait 0.05
@@ -32,8 +35,11 @@ onMsg "menu", => {
 
 onMsg "tap", =>{
     for {
-        if niuPlay == true {
-            niuGravity = niuGravity - 0.25
+        if gameReset == true {
+            return
+        }
+        if calfPlay == true {
+            calfGravity = calfGravity - 0.25
             wait 0.05
         }
         wait 0.01
@@ -42,12 +48,15 @@ onMsg "tap", =>{
 
 onMsg "tap", =>{
     for {
-        if niuPlay == true {
+        if gameReset == true {
+            return
+        }
+        if calfPlay == true {
             for !(keyPressed(KeySpace)  || mousePressed) {
                 wait 0.01
             }
-            if niuDie == false {
-                niuGravity = 0.8
+            if calfDie == false {
+                calfGravity = 0.8
                 for i:=0; i<10; i++ {
                     changeYpos 3.5
                     wait 0.03
@@ -60,10 +69,13 @@ onMsg "tap", =>{
 
 onMsg "tap", =>{
     for{
+        if gameReset == true {
+            return
+        }
         if touching("Pipe") || touching(EdgeTop) || ypos < -123.9 {
-            niuPlay = false
-            niuDie = true
-            niuGravity = 0
+            calfPlay = false
+            calfDie = true
+            calfGravity = 0
             broadcast "flash"
             broadcast "game over"
             gotoFront
@@ -76,18 +88,21 @@ onMsg "tap", =>{
 onMsg "tap", => {
     flag := 0
     for {
-        if niuPlay == true && niuGravity != 0.0{
+        if gameReset == true {
+            return
+        }
+        if calfPlay == true && calfGravity != 0.0{
             if  heading < 150 && flag == 0 {
-                turn niuGravity * -0.75
+                turn calfGravity * -0.75
             } else {
                 if heading < 90 {
                     flag = 0
                 }else{
                     flag = 1
                 }
-                turn -(niuGravity * -0.75)
+                turn -(calfGravity * -0.75)
             }
-            changeYpos niuGravity
+            changeYpos calfGravity
         }
         wait 0.03
     }
@@ -95,6 +110,9 @@ onMsg "tap", => {
 
 onMsg "game over", => {
     for {
+        if gameReset == true {
+            return
+        }
         if touching("Ground") {
             break
         }
@@ -104,6 +122,9 @@ onMsg "game over", => {
     setYpos -124
     turnTo 180
     for {
+        if gameReset {
+            break
+        }
         nextCostume
         wait 0.1
     }

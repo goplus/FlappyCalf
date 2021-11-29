@@ -7,10 +7,19 @@ onMsg "game over", => {
     wait 0.5
     gotoFront
     show
-    glide 0, 0, 0.25
+    for{
+        if ypos >= 0 {
+            break
+        }
+        changeYpos 10.0
+        wait 0.02
+    }
 }
 
 onMsg "menu", =>{
     hide
     setXYpos 0, -220
+}
+onMsg "reset_timestart", => {
+    hide
 }

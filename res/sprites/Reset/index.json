@@ -1,0 +1,20 @@
+{
+    "costumes": [
+      {
+        "bitmapResolution": 2,
+        "faceRight": 0,
+        "name": "Reset",
+        "path": "../../img/reset.png",
+        "x":75,
+        "y":23
+      }
+    ],
+    "currentCostumeIndex": 0,
+    "heading": 90,
+    "isDraggable": false,
+    "rotationStyle": "normal",
+    "size": 1.0,
+    "visible": true,
+    "x": 0,
+    "y": 0
+  }

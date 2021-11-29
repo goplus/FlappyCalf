@@ -1,17 +1,17 @@
-onStart => {
+onMsg "menu", => {
     for {
-        if niuPlay == true {
+        if gameReset == true {
             return
         }
-        if niuDie == false {
+        if calfDie == false {
             for i := 0; i < 10; i++ {
-                if niuPlay == false {
+                if calfPlay == false {
                     changeYpos -0.5
                 }
                 wait 0.05
             }
             for i := 0; i < 10; i++ {
-                if niuPlay == false {
+                if calfPlay == false {
                     changeYpos 0.5
                 }
                 wait 0.05

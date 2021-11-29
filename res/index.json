@@ -14,9 +14,11 @@
       "Start",
       "TapInfo",
       "GameOver",
-      "Niu",
+      "Calf",
       "Pipe",
       "Ground",
+      "Reset",
+      "TimeFrame",
       {
         "type": "stageMonitor",
         "target": "",
