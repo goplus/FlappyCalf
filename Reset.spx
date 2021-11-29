@@ -1,25 +1,25 @@
 onMsg "game over", => {
-    wait 0.5
-    gotoFront
-    show
-    for {
-        if touching(Mouse) {
-            setYpos -90
-        } else {
-            setYpos -95
-        }
-        wait 0.1
-    }
+	wait 0.5
+	gotoFront
+	show
+	for {
+		if touching(Mouse) {
+			setYpos -90
+		} else {
+			setYpos -95
+		}
+		wait 0.1
+	}
 }
 
 onMsg "menu", => {
-    hide
-    setXYpos 0, -100
+	hide
+	setXYpos 0, -100
 }
 
 onClick => {
-    hide
-    reset
-    stop OtherScriptsInSprite
-    broadcast "menu"
+	hide
+	reset
+	stop OtherScriptsInSprite
+	broadcast "menu"
 }

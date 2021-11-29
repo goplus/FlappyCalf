@@ -1,34 +1,34 @@
 onMsg "tap", => {
-    wait 1.5
-    for !calfDie {
-        clone
-        wait 2.6
-    }
+	wait 1.5
+	for !calfDie {
+		clone
+		wait 2.6
+	}
 }
 
 onCloned => {
-   setCostume rand(0, 4)
-   setXYpos 250, 17
-   show
-   for xpos >= -250 {
-        changeXpos gameScrollX
-        wait gameScrollTime
-   }
-   die
+	setCostume rand(0, 4)
+	setXYpos 250, 17
+	show
+	for xpos >= -250 {
+		changeXpos gameScrollX
+		wait gameScrollTime
+	}
+	die
 }
 
 onCloned => {
-    for {
-        if xpos < -80.0 && calfPlay == true {
-            userScore++
-            break
-        }
-        wait 0.03
-    }
+	for {
+		if xpos < -80.0 && calfPlay == true {
+			userScore++
+			break
+		}
+		wait 0.03
+	}
 }
 
 onMsg "game over", => {
-    stop OtherScriptsInSprite
+	stop OtherScriptsInSprite
 }
 
 onMsg "menu", => {

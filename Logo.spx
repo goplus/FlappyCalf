@@ -1,32 +1,32 @@
 onMsg "menu", => {
-    for {
-        if calfDie == false {
-            for i := 0; i < 10; i++ {
-                if calfPlay == false {
-                    changeYpos -0.5
-                }
-                wait 0.05
-            }
-            for i := 0; i < 10; i++ {
-                if calfPlay == false {
-                    changeYpos 0.5
-                }
-                wait 0.05
-            }
-        }
-    }
+	for {
+		if calfDie == false {
+			for i := 0; i < 10; i++ {
+				if calfPlay == false {
+					changeYpos -0.5
+				}
+				wait 0.05
+			}
+			for i := 0; i < 10; i++ {
+				if calfPlay == false {
+					changeYpos 0.5
+				}
+				wait 0.05
+			}
+		}
+	}
 }
 
 onMsg "menu", => {
-    setXYpos 0, 55
-    gotoFront
-    show
+	setXYpos 0, 55
+	gotoFront
+	show
 }
 
 onMsg "start", => {
-    hide
+	hide
 }
 
 onMsg "tap", => {
-    hide
+	hide
 }

@@ -1,12 +1,12 @@
 var (
-	Logo Logo
+	Logo     Logo
 	GameOver GameOver
-	Reset Reset
-	Ground Ground
-	Calf Calf
-	Pipe Pipe
-	Start Start
-	TapInfo TapInfo
+	Reset    Reset
+	Ground   Ground
+	Calf     Calf
+	Pipe     Pipe
+	Start    Start
+	TapInfo  TapInfo
 
 	userScore int
 )
@@ -23,9 +23,9 @@ var (
 )
 
 func reset() {
-	userScore   = 0
-	calfPlay    = false
-	calfDie     = false
+	userScore = 0
+	calfPlay = false
+	calfDie = false
 	calfGravity = 0.0
 }
 

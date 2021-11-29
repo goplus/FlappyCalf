@@ -1,19 +1,19 @@
 onMsg "start", => {
-    hide
-    setXYpos 0, -220
+	hide
+	setXYpos 0, -220
 }
 
 onMsg "game over", => {
-    wait 0.5
-    gotoFront
-    show
-    for ypos < 0 {
-        changeYpos 10.0
-        wait 0.02
-    }
+	wait 0.5
+	gotoFront
+	show
+	for ypos < 0 {
+		changeYpos 10.0
+		wait 0.02
+	}
 }
 
-onMsg "menu", =>{
-    hide
-    setXYpos 0, -220
+onMsg "menu", => {
+	hide
+	setXYpos 0, -220
 }

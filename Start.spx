@@ -1,27 +1,26 @@
-onStart =>{
-    broadcast "menu"
-    setXYpos 0, -95
+onStart => {
+	broadcast "menu"
+	setXYpos 0, -95
 }
 
-
 onClick => {
-    broadcast "start"
-    hide
+	broadcast "start"
+	hide
 }
 
 onMsg "start", => {
-    hide
+	hide
 }
 
 onMsg "menu", => {
 	gotoFront
-    show
-    for visible {
-        if touching(Mouse) {
-            setYpos -90
-        }else{
-            setYpos -95
-        }
-        wait 0.1
-    }
+	show
+	for visible {
+		if touching(Mouse) {
+			setYpos -90
+		} else {
+			setYpos -95
+		}
+		wait 0.1
+	}
 }
