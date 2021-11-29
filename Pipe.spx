@@ -5,13 +5,7 @@ onStart => {
 
 onMsg "tap", => {
     wait 1.5
-    for {
-        if gameReset == true {
-            break
-        }
-        if calfDie == true {
-            break
-        }
+    for !calfDie {
         clone
         wait 2.6
     }
@@ -21,16 +15,8 @@ onCloned => {
    setCostume rand(0, 4)
    setXYpos 250, 17
    show
-   for {
-        if gameReset == true {
-            return
-        }
-        if xpos < -250 {
-           break
-        }
-        if calfDie == false {
-            changeXpos gameScrollX
-        }
+   for xpos >= -250 {
+        changeXpos gameScrollX
         wait gameScrollTime
    }
    die
@@ -38,12 +24,9 @@ onCloned => {
 
 onCloned => {
     for {
-        if gameReset == true {
-            return
-        }
-        if xpos < -80.0 && calfPlay == true{
-            userScore ++
-            return
+        if xpos < -80.0 && calfPlay == true {
+            userScore++
+            break
         }
         wait 0.03
     }

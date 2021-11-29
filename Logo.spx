@@ -1,8 +1,5 @@
 onMsg "menu", => {
     for {
-        if gameReset == true {
-            return
-        }
         if calfDie == false {
             for i := 0; i < 10; i++ {
                 if calfPlay == false {

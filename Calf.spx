@@ -10,9 +10,6 @@ onMsg "menu", => {
 
 onMsg "menu", => {
     for {
-        if gameReset == true {
-            return
-        }
         if calfPlay == true {
             return
         }
@@ -35,9 +32,6 @@ onMsg "menu", => {
 
 onMsg "tap", =>{
     for {
-        if gameReset == true {
-            return
-        }
         if calfPlay == true {
             calfGravity = calfGravity - 0.25
             wait 0.05
@@ -48,9 +42,6 @@ onMsg "tap", =>{
 
 onMsg "tap", =>{
     for {
-        if gameReset == true {
-            return
-        }
         if calfPlay == true {
             for !(keyPressed(KeySpace)  || mousePressed) {
                 wait 0.01
@@ -69,9 +60,6 @@ onMsg "tap", =>{
 
 onMsg "tap", =>{
     for{
-        if gameReset == true {
-            return
-        }
         if touching("Pipe") || touching(EdgeTop) || ypos < -123.9 {
             calfPlay = false
             calfDie = true
@@ -88,19 +76,16 @@ onMsg "tap", =>{
 onMsg "tap", => {
     flag := 0
     for {
-        if gameReset == true {
-            return
-        }
         if calfPlay == true && calfGravity != 0.0{
             if  heading < 150 && flag == 0 {
                 turn calfGravity * -0.75
             } else {
                 if heading < 90 {
                     flag = 0
-                }else{
+                } else {
                     flag = 1
                 }
-                turn -(calfGravity * -0.75)
+                turn calfGravity * 0.75
             }
             changeYpos calfGravity
         }
@@ -110,9 +95,6 @@ onMsg "tap", => {
 
 onMsg "game over", => {
     for {
-        if gameReset == true {
-            return
-        }
         if touching("Ground") {
             break
         }
@@ -122,11 +104,7 @@ onMsg "game over", => {
     setYpos -124
     turnTo 180
     for {
-        if gameReset {
-            break
-        }
         nextCostume
         wait 0.1
     }
 }
-

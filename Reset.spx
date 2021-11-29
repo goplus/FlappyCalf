@@ -9,30 +9,22 @@ onMsg "game over", => {
     gotoFront
     show
     for{
-        if gameReset == false {
-            break
-        }
         if touching(Mouse) {
             setYpos -90
-        }else{
+        } else {
             setYpos -95
         }
         wait 0.1
     }
-
-
 }
+
 onMsg "start", => {
     hide
 }
-onClick =>{
-    hide
-    reset()
-    gameReset = true
-    broadcast "reset_timestart"
-}
 
-onMsg "reset_timeend", =>{
-    reset()
-    broadcast "menu"
+onClick => {
+    hide
+    stop AllOtherScripts
+    reset
+    broadcast "start"
 }

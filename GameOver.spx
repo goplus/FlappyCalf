@@ -7,7 +7,7 @@ onMsg "game over", => {
     wait 0.5
     gotoFront
     show
-    for{
+    for {
         if ypos >= 0 {
             break
         }
@@ -20,6 +20,7 @@ onMsg "menu", =>{
     hide
     setXYpos 0, -220
 }
+
 onMsg "reset_timestart", => {
     hide
 }

@@ -17,9 +17,6 @@ onMsg "menu", => {
 	gotoFront
     show
     for visible {
-        if gameReset == true {
-            return
-        }
         if touching(Mouse) {
             setYpos -90
         }else{

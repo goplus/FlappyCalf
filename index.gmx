@@ -7,27 +7,26 @@ var (
 	Pipe Pipe
 	Start Start
 	TapInfo TapInfo
-	TimeFrame  TimeFrame
 
-	userScore int  // 得分
+	userScore int
+)
+
+const (
+	gameScrollX    = -3.5
+	gameScrollTime = 0.05
 )
 
 var (
-	calfPlay bool = false
-	calfDie  bool = false
-	calfGravity float64 = 0.0
-	gameReset bool = false
-	gameScrollX float64 = -3.5
-	gameScrollTime float64 = 0.05
+	calfPlay    = false
+	calfDie     = false
+	calfGravity = 0.0
 )
 
-func reset(){
-	calfPlay  = false
-	calfDie   = false
-	calfGravity  = 0.0
-	gameReset  = false
-	gameScrollX  = -3.5
-	gameScrollTime  = 0.05
-	userScore = 0
+func reset() {
+	userScore   = 0
+	calfPlay    = false
+	calfDie     = false
+	calfGravity = 0.0
 }
+
 run "res", {Title: "FlappyBird (by Go+)"}
