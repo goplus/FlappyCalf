@@ -9,10 +9,7 @@ onMsg "menu", => {
 }
 
 onMsg "menu", => {
-    for {
-        if calfPlay == true {
-            return
-        }
+    for !calfPlay {
         if calfDie == false {
             for i := 0; i < 10; i++ {
                 if calfPlay == false {
@@ -64,7 +61,6 @@ onMsg "tap", =>{
             calfPlay = false
             calfDie = true
             calfGravity = 0
-            broadcast "flash"
             broadcast "game over"
             gotoFront
             break
@@ -94,10 +90,8 @@ onMsg "tap", => {
 }
 
 onMsg "game over", => {
-    for {
-        if touching("Ground") {
-            break
-        }
+    stop OtherScriptsInSprite
+    for !touching("Ground") {
         changeYpos -10
         wait 0.04
     }

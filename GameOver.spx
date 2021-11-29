@@ -1,16 +1,13 @@
-onStart => {
-    setXYpos 0, -220
+onMsg "start", => {
     hide
+    setXYpos 0, -220
 }
 
 onMsg "game over", => {
     wait 0.5
     gotoFront
     show
-    for {
-        if ypos >= 0 {
-            break
-        }
+    for ypos < 0 {
         changeYpos 10.0
         wait 0.02
     }
@@ -19,8 +16,4 @@ onMsg "game over", => {
 onMsg "menu", =>{
     hide
     setXYpos 0, -220
-}
-
-onMsg "reset_timestart", => {
-    hide
 }

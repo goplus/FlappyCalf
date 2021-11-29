@@ -1,8 +1,3 @@
-onStart => {
-    hide
-    setXYpos 0, 0
-}
-
 onMsg "tap", => {
     wait 1.5
     for !calfDie {
@@ -32,6 +27,10 @@ onCloned => {
     }
 }
 
+onMsg "game over", => {
+    stop OtherScriptsInSprite
+}
+
 onMsg "menu", => {
-	die
+	destroy
 }
