@@ -14,3 +14,8 @@ FlappyCalf - a game powered by Go+ spx game engine
   * git clone https://github.com/goplus/FlappyCalf.git
   * cd FlappyCalf
   * ./run.sh
+
+- Download GoMobile and build it. See golang.org/x/mobile.
+- Build Mobile
+  * ./buildmobile.sh
+

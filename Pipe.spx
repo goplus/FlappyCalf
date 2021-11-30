@@ -2,7 +2,7 @@ onMsg "tap", => {
 	wait 1.5
 	for !calfDie {
 		clone
-		wait 2.6
+		wait 2.8
 	}
 }
 

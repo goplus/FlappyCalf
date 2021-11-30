@@ -3,10 +3,11 @@
       {
         "bitmapResolution": 2,
         "faceRight": 0,
-        "name": "Reset",
-        "path": "../../img/reset2.png",
-        "x":48,
-        "y":55
+        "name": "TapInfo",
+        "path": "../../img/tapinfo.png",
+        "x":230,
+        "y":168
+
       }
     ],
     "currentCostumeIndex": 0,
@@ -14,7 +15,7 @@
     "isDraggable": false,
     "rotationStyle": "normal",
     "size": 1.0,
-    "visible": false,
+    "visible": true,
     "x": 0,
     "y": 0
   }

@@ -1,0 +1,1 @@
+gomobile build --tags canvas  -target=android  -androidapi 29

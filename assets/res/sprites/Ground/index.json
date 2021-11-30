@@ -1,12 +1,11 @@
 {
     "costumes": [
       {
-        "bitmapResolution": 2,
-        "faceRight": 0,
-        "name": "Reset",
-        "path": "../../img/reset2.png",
-        "x":48,
-        "y":55
+        "bitmapResolution": 1,
+        "name": "Ground",
+        "path": "../../img/ground.png",
+        "x": 240,
+        "y": 0
       }
     ],
     "currentCostumeIndex": 0,
