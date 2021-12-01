@@ -1,4 +1,4 @@
-module github.com/goplus/FlappyCalf
+module github.com/goplus/FlappyBird
 
 go 1.16
 

@@ -1,3 +1,4 @@
 go mod tidy
 rm -f .gop/gop.cache
-gop run . -f
+cd assets
+gop run ..
