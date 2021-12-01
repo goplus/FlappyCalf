@@ -5,7 +5,7 @@ FlappyCalf - a game powered by Go+ spx game engine
 [![GitHub release](https://img.shields.io/github/v/tag/goplus/FlappyCalf.svg?label=release)](https://github.com/goplus/FlappyCalf/releases)
 [![Language](https://img.shields.io/badge/game_engine-spx-green.svg)](https://github.com/goplus/spx)
 
-![Screen Shot](res/FlappyCalf.jpg)
+![Screen Shot](assets/res/FlappyCalf.jpg)
 
 ### How to run
 
