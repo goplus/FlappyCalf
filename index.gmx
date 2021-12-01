@@ -33,5 +33,4 @@ func reset() {
 	calfDie = false
 	calfGravity = 0.0
 }
-
 run "res", {Title: "FlappyCalf (by Go+)"}

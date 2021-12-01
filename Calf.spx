@@ -28,47 +28,38 @@ onMsg "menu", => {
 }
 
 onMsg "tap", => {
-	for {
-		if calfPlay == true {
-			calfGravity = calfGravity - 0.25
-			wait 0.05
-		}
-		wait 0.01
+	for calfPlay {
+		calfGravity = calfGravity - 0.25
+		wait 0.05
 	}
 }
 
 onMsg "tap", => {
-	for {
-		if calfPlay == true {
-			for !(keyPressed(KeySpace) || mousePressed) {
-				wait 0.01
-			}
-			if calfDie == false {
-				calfGravity = 0.8
-				for i := 0; i < 10; i++ {
-					changeYpos 3.5
-					wait 0.03
-				}
-			}
+	for calfPlay {
+		for !(keyPressed(KeySpace) || mousePressed) {
+			wait 0.01
 		}
-		wait 0.01
+		calfGravity = 0.8
+		for i := 0; i < 10; i++ {
+			changeYpos 3.5
+			wait 0.03
+		}
+		wait 0.03
 	}
 }
 
 onMsg "tap", => {
-	for {
-		if calfPlay == true {
-			for !(keyPressed(KeySpace) || mousePressed) {
-				wait 0.01
-			}
-			play mwing, true
-			wait 0.04
+	for calfPlay {
+		for !(keyPressed(KeySpace) || mousePressed) {
+			wait 0.01
 		}
+		play mwing, true
+		wait 0.04
 	}
 }
 
 onMsg "tap", => {
-	for {
+	for calfPlay {
 		if touching("Pipe") || touching(EdgeTop) || ypos < -123.9 {
 
 			calfPlay = false
@@ -84,8 +75,8 @@ onMsg "tap", => {
 
 onMsg "tap", => {
 	flag := 0
-	for {
-		if calfPlay == true && calfGravity != 0.0 {
+	for calfPlay {
+		if calfGravity != 0.0 {
 
 			if heading < 150 && flag == 0 {
 				turn calfGravity*-0.75
@@ -112,6 +103,7 @@ onMsg "game over", => {
 
 onMsg "game over", => {
 	stop OtherScriptsInSprite
+	wait 0.1
 	for !touching("Ground") {
 		changeYpos -10
 		wait 0.04
