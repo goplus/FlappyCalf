@@ -5,8 +5,8 @@
         "faceRight": 0,
         "name": "Reset",
         "path": "../../img/reset2.png",
-        "x":48,
-        "y":55
+        "x":97,
+        "y":35
       }
     ],
     "currentCostumeIndex": 0,
