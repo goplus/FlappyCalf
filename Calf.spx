@@ -28,6 +28,7 @@ onMsg "menu", => {
 }
 
 onMsg "tap", => {
+	setCostume 0
 	for calfPlay {
 		calfGravity = calfGravity - 0.25
 		wait 0.05
@@ -110,7 +111,8 @@ onMsg "game over", => {
 	}
 	setYpos -124
 	turnTo 180
-	for {
+	for !calfPlay{
+
 		nextCostume
 		wait 0.1
 	}
