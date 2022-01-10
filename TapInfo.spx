@@ -17,3 +17,6 @@ onMsg "start", => {
 onMsg "menu", => {
 	hide
 }
+onMsg "game over", => {
+	stop OtherScriptsInSprite
+}

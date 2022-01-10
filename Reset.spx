@@ -18,8 +18,8 @@ onMsg "menu", => {
 }
 
 onClick => {
+	stop OtherScriptsInSprite
 	hide
 	reset
-	stop OtherScriptsInSprite
 	broadcast "menu"
 }

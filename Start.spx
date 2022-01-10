@@ -24,3 +24,6 @@ onMsg "menu", => {
 		wait 0.1
 	}
 }
+onMsg "game over", => {
+	stop OtherScriptsInSprite
+}

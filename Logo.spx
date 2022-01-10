@@ -30,3 +30,7 @@ onMsg "start", => {
 onMsg "tap", => {
 	hide
 }
+
+onMsg "game over", => {
+	stop OtherScriptsInSprite
+}
