@@ -1,5 +1,3 @@
-gop_autogen*.go
-gop.mod
 .gop/
 .DS_Store
 
@@ -18,6 +16,6 @@ gop.mod
 
 # Dependency directories (remove the comment below to include it)
 # vendor/
-gop_autogen.go
 FlappyCalf
 FlappyCalf.apk
+go.work*

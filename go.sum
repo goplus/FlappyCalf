@@ -14,9 +14,6 @@ github.com/golang/freetype v0.0.0-20170609003504-e2365dfdc4a0 h1:DACJavvAHhabrF0
 github.com/golang/freetype v0.0.0-20170609003504-e2365dfdc4a0/go.mod h1:E/TSTwGwJL78qG/PmXZO1EjYhfJinVAhrmmHX6Z8B9k=
 github.com/goplus/canvas v0.1.0 h1:Vx3f2+U8UANvWf5/01YsQYKNbZDm1GZCjhlEBFrQkeU=
 github.com/goplus/canvas v0.1.0/go.mod h1:Rhcvo5qkpD9WuXFnvnXtrBSY97l6h7sXQuofrmiLNdM=
-github.com/goplus/gop v1.1.0-alpha2 h1:s3wMFJpprmFBmVRqUIoggQ2wJ3Kb3gX+7J0f8f2Oh8Q=
-github.com/goplus/gop v1.1.0-alpha2/go.mod h1:FTu64eb9ZYCwnTfSze6asR8kbxXPs6mbI+kRmUikKf0=
-github.com/goplus/gox v1.9.4/go.mod h1:PznHkzl2HARBf7+s2reqcwKm1Z1a6Wae6EntQEh0iJI=
 github.com/goplus/spx v1.0.0 h1:mEPqYCjYfWmRNkyq0VMDlD3XtkldDlbzCO69d/iAYro=
 github.com/goplus/spx v1.0.0/go.mod h1:/k34E8W0YobBjsjvpefJz6n1SLMgAyHIuGb1BBRwtDk=
 github.com/hajimehoshi/bitmapfont/v2 v2.2.0/go.mod h1:Llj2wTYXMuCTJEw2ATNIO6HbFPOoBYPs08qLdFAxOsQ=
@@ -26,7 +23,6 @@ github.com/hajimehoshi/file2byteslice v0.0.0-20210813153925-5340248a8f41/go.mod 
 github.com/hajimehoshi/go-mp3 v0.3.2/go.mod h1:qMJj/CSDxx6CGHiZeCgbiq2DSUkbK0UbtXShQcnfyMM=
 github.com/hajimehoshi/go-mp3 v0.3.3 h1:cWnfRdpye2m9ElSoVqneYRcpt/l3ijttgjMeQh+r+FE=
 github.com/hajimehoshi/go-mp3 v0.3.3/go.mod h1:qMJj/CSDxx6CGHiZeCgbiq2DSUkbK0UbtXShQcnfyMM=
-github.com/hajimehoshi/oto v1.0.1 h1:8AMnq0Yr2YmzaiqTg/k1Yzd6IygUGk2we9nmjgbgPn4=
 github.com/hajimehoshi/oto v1.0.1/go.mod h1:wovJ8WWMfFKvP587mhHgot/MBr4DnNy9m6EepeVGnos=
 github.com/hajimehoshi/oto/v2 v2.1.0 h1:/h+UkbKzhD7xBHOQlWgKUplBPZ+J4DK3P2Y7g2UF1X4=
 github.com/hajimehoshi/oto/v2 v2.1.0/go.mod h1:9i0oYbpJ8BhVGkXDKdXKfFthX1JUNfXjeTp944W8TGM=
