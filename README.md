@@ -1,4 +1,4 @@
-FlappyCalf - a game powered by Go+ spx game engine
+FlappyCalf - powered by Go+ Builder
 =========
 
 [![Language](https://img.shields.io/badge/language-Go+-blue.svg)](https://github.com/goplus/gop)
@@ -9,13 +9,12 @@ FlappyCalf - a game powered by Go+ spx game engine
 
 ### How to run
 
-- Download Go+ and build it. See https://github.com/goplus/gop#how-to-build.
+- Install Go+. See https://github.com/goplus/gop#how-to-install.
 - Download this game and run.
   * git clone https://github.com/goplus/FlappyCalf.git
   * cd FlappyCalf
-  * ./run.sh
+  * gop run .
 
 - Download GoMobile and build it. See golang.org/x/mobile.
 - Build Mobile
   * ./buildmobile.sh
-
