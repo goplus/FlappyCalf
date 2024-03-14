@@ -33,5 +33,3 @@ func reset() {
 	calfDie = false
 	calfGravity = 0.0
 }
-
-run "assets", {Title: "FlappyCalf (by Go+)"}

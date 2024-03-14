@@ -12,37 +12,37 @@ const (
 
 type Calf struct {
 	spx.Sprite
-	*index
+	*Game
 }
 type GameOver struct {
 	spx.Sprite
-	*index
+	*Game
 }
 type Ground struct {
 	spx.Sprite
-	*index
+	*Game
 }
 type Logo struct {
 	spx.Sprite
-	*index
+	*Game
 }
 type Pipe struct {
 	spx.Sprite
-	*index
+	*Game
 }
 type Reset struct {
 	spx.Sprite
-	*index
+	*Game
 }
 type Start struct {
 	spx.Sprite
-	*index
+	*Game
 }
 type TapInfo struct {
 	spx.Sprite
-	*index
+	*Game
 }
-type index struct {
+type Game struct {
 	spx.Game
 	Logo      Logo
 	GameOver  GameOver
@@ -62,23 +62,20 @@ type index struct {
 var calfPlay = false
 var calfDie = false
 var calfGravity = 0.0
-//line index.gmx:30:1
-func (this *index) reset() {
-//line index.gmx:31:1
+//line main.spx:30:1
+func (this *Game) reset() {
+//line main.spx:31:1
 	this.userScore = 0
-//line index.gmx:32:1
+//line main.spx:32:1
 	calfPlay = false
-//line index.gmx:33:1
+//line main.spx:33:1
 	calfDie = false
-//line index.gmx:34:1
+//line main.spx:34:1
 	calfGravity = 0.0
 }
-//line index.gmx:37
-func (this *index) MainEntry() {
-//line index.gmx:37:1
-	spx.Gopt_Game_Run(this, "assets", &spx.Config{Title: "FlappyCalf (by Go+)"})
+func (this *Game) MainEntry() {
 }
-func (this *index) Main() {
+func (this *Game) Main() {
 	spx.Gopt_Game_Main(this, new(Calf), new(GameOver), new(Ground), new(Logo), new(Pipe), new(Reset), new(Start), new(TapInfo))
 }
 //line Calf.spx:1
@@ -620,5 +617,5 @@ func (this *TapInfo) Classfname() string {
 	return "TapInfo"
 }
 func main() {
-	new(index).Main()
+	new(Game).Main()
 }
