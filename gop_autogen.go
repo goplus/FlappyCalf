@@ -11,35 +11,35 @@ const (
 )
 
 type Calf struct {
-	spx.Sprite
+	spx.SpriteImpl
 	*Game
 }
 type GameOver struct {
-	spx.Sprite
+	spx.SpriteImpl
 	*Game
 }
 type Ground struct {
-	spx.Sprite
+	spx.SpriteImpl
 	*Game
 }
 type Logo struct {
-	spx.Sprite
+	spx.SpriteImpl
 	*Game
 }
 type Pipe struct {
-	spx.Sprite
+	spx.SpriteImpl
 	*Game
 }
 type Reset struct {
-	spx.Sprite
+	spx.SpriteImpl
 	*Game
 }
 type Start struct {
-	spx.Sprite
+	spx.SpriteImpl
 	*Game
 }
 type TapInfo struct {
-	spx.Sprite
+	spx.SpriteImpl
 	*Game
 }
 type Game struct {
@@ -85,7 +85,7 @@ func (this *Calf) Main() {
 //line Calf.spx:2:1
 		this.SetXYpos(-80, 0)
 //line Calf.spx:3:1
-		this.TurnTo(90)
+		this.TurnTo__2(90)
 //line Calf.spx:4:1
 		this.Show()
 	})
@@ -137,7 +137,7 @@ func (this *Calf) Main() {
 //line Calf.spx:30:1
 	this.OnMsg__1("tap", func() {
 //line Calf.spx:31:1
-		this.SetCostume(0)
+		this.SetCostume__1(0)
 //line Calf.spx:32:1
 		for calfPlay {
 			spx.Sched()
@@ -199,7 +199,7 @@ func (this *Calf) Main() {
 		for calfPlay {
 			spx.Sched()
 //line Calf.spx:64:1
-			if this.Touching("Pipe") || this.Touching(spx.EdgeTop) || this.Ypos() < -123.9 {
+			if this.Touching__0("Pipe") || this.Touching__2(spx.EdgeTop) || this.Ypos() < -123.9 {
 //line Calf.spx:66:1
 				calfPlay = false
 //line Calf.spx:67:1
@@ -229,7 +229,7 @@ func (this *Calf) Main() {
 //line Calf.spx:82:1
 				if this.Heading() < 150 && flag == 0 {
 //line Calf.spx:83:1
-					this.Turn(calfGravity * -0.75)
+					this.Turn__0(calfGravity * -0.75)
 				} else {
 //line Calf.spx:85:1
 					if this.Heading() < 90 {
@@ -240,7 +240,7 @@ func (this *Calf) Main() {
 						flag = 1
 					}
 //line Calf.spx:90:1
-					this.Turn(calfGravity * 0.75)
+					this.Turn__0(calfGravity * 0.75)
 				}
 //line Calf.spx:92:1
 				this.ChangeYpos(calfGravity)
@@ -252,7 +252,7 @@ func (this *Calf) Main() {
 //line Calf.spx:98:1
 	this.OnMsg__1("game over", func() {
 //line Calf.spx:99:1
-		if this.Touching("Pipe") {
+		if this.Touching__0("Pipe") {
 //line Calf.spx:100:1
 			this.Play__1(this.mhit, true)
 		}
@@ -266,7 +266,7 @@ func (this *Calf) Main() {
 //line Calf.spx:107:1
 		this.Wait(0.1)
 //line Calf.spx:108:1
-		for !this.Touching("Ground") {
+		for !this.Touching__0("Ground") {
 			spx.Sched()
 //line Calf.spx:109:1
 			this.ChangeYpos(-10)
@@ -276,7 +276,7 @@ func (this *Calf) Main() {
 //line Calf.spx:112:1
 		this.SetYpos(-124)
 //line Calf.spx:113:1
-		this.TurnTo(180)
+		this.TurnTo__2(180)
 //line Calf.spx:114:1
 		for !calfPlay {
 			spx.Sched()
@@ -420,7 +420,7 @@ func (this *Pipe) Main() {
 		for !calfDie {
 			spx.Sched()
 //line Pipe.spx:4:1
-			spx.Gopt_Sprite_Clone__0(this)
+			spx.Gopt_SpriteImpl_Clone__0(this)
 //line Pipe.spx:5:1
 			this.Wait(2.8)
 		}
@@ -428,7 +428,7 @@ func (this *Pipe) Main() {
 //line Pipe.spx:9:1
 	this.OnCloned__1(func() {
 //line Pipe.spx:10:1
-		this.SetCostume(spx.Rand__0(0, 4))
+		this.SetCostume__1(spx.Rand__0(0, 4))
 //line Pipe.spx:11:1
 		this.SetXYpos(250, 17)
 //line Pipe.spx:12:1
@@ -470,7 +470,7 @@ func (this *Pipe) Main() {
 //line Pipe.spx:35:1
 	this.OnMsg__1("menu", func() {
 //line Pipe.spx:36:1
-		this.Destroy()
+		this.DeleteThisClone()
 	})
 }
 func (this *Pipe) Classfname() string {
@@ -490,7 +490,7 @@ func (this *Reset) Main() {
 		for {
 			spx.Sched()
 //line Reset.spx:6:1
-			if this.Touching(spx.Mouse) {
+			if this.Touching__2(spx.Mouse) {
 //line Reset.spx:7:1
 				this.SetYpos(-90)
 			} else {
@@ -554,7 +554,7 @@ func (this *Start) Main() {
 		for this.Visible() {
 			spx.Sched()
 //line Start.spx:19:1
-			if this.Touching(spx.Mouse) {
+			if this.Touching__2(spx.Mouse) {
 //line Start.spx:20:1
 				this.SetYpos(-90)
 			} else {

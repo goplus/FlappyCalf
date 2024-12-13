@@ -23,12 +23,13 @@
         "target": "",
         "val": "getVar:userScore",
         "color": 15629590,
+        "name": "score",
         "label": "score",
         "mode": 1,
         "sliderMin": 0,
         "sliderMax": 100,
-        "x": 5,
-        "y": 5,
+        "x": -235,
+        "y": 175,
         "isDiscrete": true,
         "visible": true
       }
