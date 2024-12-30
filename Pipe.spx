@@ -33,5 +33,5 @@ onMsg "game over", => {
 }
 
 onMsg "menu", => {
-	destroy
+	deleteThisClone
 }
